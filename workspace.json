@@ -2,6 +2,8 @@
   "version": 2,
   "projects": {
     "frontend": "apps/frontend",
-    "frontend-e2e": "apps/frontend-e2e"
+    "frontend-e2e": "apps/frontend-e2e",
+    "types": "libs/types",
+    "ui": "libs/ui"
   }
 }
