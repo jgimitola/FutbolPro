@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@futbol-pro/services": ["libs/services/src/index.ts"],
       "@futbol-pro/types": ["libs/types/src/index.ts"],
       "@futbol-pro/ui": ["libs/ui/src/index.ts"]
     }

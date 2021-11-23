@@ -1,9 +1,18 @@
 import styled from '@emotion/styled';
 
-export const StyledNav = styled.nav``;
+export const StyledNav = styled.nav`
+  display: flex;
+  justify-content: center;
+
+  position: sticky;
+  top: 0;
+
+  background-color: #383838;
+`;
 
 export const StyledUl = styled.ul`
-  height: 2rem;
+  height: 2.5rem;
+  width: clamp(320px, 70%, 1300px);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -14,7 +23,7 @@ export const StyledUl = styled.ul`
   font-size: 1.3rem;
 
   a {
-    color: black;
+    color: white;
     text-decoration: none;
   }
 `;

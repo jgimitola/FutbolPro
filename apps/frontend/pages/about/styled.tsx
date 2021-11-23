@@ -8,3 +8,7 @@ export const StyledP = styled.p`
   border-radius: 1rem;
   padding: 1rem;
 `;
+
+export const Creditos = styled.p`
+  text-align: center;
+`;

@@ -1,16 +1,15 @@
-import styled from '@emotion/styled';
+import Link from 'next/link';
 
-/* eslint-disable-next-line */
-export interface CardProps {}
-
-const StyledCard = styled.div`
-  color: pink;
-`;
+import { CardProps } from '@futbol-pro/types';
+import { StyledCard, CardImage, CardText } from './styled';
 
 export function Card(props: CardProps) {
   return (
     <StyledCard>
-      <h1>Welcome to Card!</h1>
+      <CardImage src={props.imageUrl} alt="" />
+      <Link href={props.href}>
+        <CardText>{props.text}</CardText>
+      </Link>
     </StyledCard>
   );
 }

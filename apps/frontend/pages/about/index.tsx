@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { StyledP } from './styled';
+import { StyledP, Creditos } from './styled';
 
 const StyledAbout = styled.div`
   display: flex;
@@ -16,7 +16,7 @@ export function About() {
         FutbolPRO es una página que te permite buscar la mayoría de equipos y
         jugadores de fútbol del mundo. Echa un vistazo y no te arrepentirás.
       </StyledP>
-      <p>Hecho por Jesús Imitola, Jesús Reyes y Diego Cavadia</p>
+      <Creditos>Hecho por Jesús Imitola, Jesús Reyes y Diego Cavadia</Creditos>
     </StyledAbout>
   );
 }

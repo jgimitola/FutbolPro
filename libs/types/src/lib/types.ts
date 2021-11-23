@@ -1,3 +1,6 @@
-export function types(): string {
-  return 'types';
+/* eslint-disable-next-line */
+export interface CardProps {
+  text: string;
+  imageUrl: string;
+  href: string;
 }

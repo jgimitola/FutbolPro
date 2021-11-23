@@ -7,6 +7,8 @@ export interface HeaderProps {
 
 const StyledHeader = styled.h1`
   text-decoration: underline;
+  text-align: center;
+  margin-top: 1rem;
 `;
 
 export function Header(props: HeaderProps) {
