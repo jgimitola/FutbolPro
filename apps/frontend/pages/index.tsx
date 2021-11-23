@@ -4,89 +4,28 @@ import { Header, Count } from '@futbol-pro/ui';
 import Card from '../components/card/card';
 import List from '../components/list/list';
 
+import { useAppContext } from '../components/country-context/country-context';
+
 const StyledPage = styled.div``;
 
 export function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.@emotion/styled file.
-   */
+  const countries = useAppContext();
+  const countriesNumber = countries.length;
+
   return (
     <StyledPage>
       <Header text="Explorador de países" />
-      <Count current={0} />
+      <Count current={countriesNumber} />
       <List>
-        <Card
-          href="/hola"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
-        <Card
-          href="/about"
-          text="Hola"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
-        />
+        {countries.map((country) => {
+          return (
+            <Card
+              text={country.name}
+              imageUrl={country.flag}
+              href={`/${country.name}`}
+            />
+          );
+        })}
       </List>
     </StyledPage>
   );

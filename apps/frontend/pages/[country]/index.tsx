@@ -22,7 +22,7 @@ export function Country(props: CountryProps) {
         <Card
           href="/country/abcd34"
           text="Equipo Random"
-          imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
+          imageUrl="https://media.api-football.com/flags/ad.svg"
         />
       </List>
     </StyledCountry>

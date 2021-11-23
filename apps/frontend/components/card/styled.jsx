@@ -14,7 +14,7 @@ export const StyledCard = styled.li`
 `;
 
 export const CardImage = styled.img`
-  aspect-ratio: 2/1;
+  aspect-ratio: 1.33;
   width: 120px;
 `;
 

@@ -4,6 +4,8 @@ import './styles.css';
 
 import { Nav } from '@futbol-pro/ui';
 
+import { AppWrapper } from '../components/country-context/country-context';
+
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
     <>
@@ -13,7 +15,9 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <div className="app">
         <Nav />
         <main>
-          <Component {...pageProps} />
+          <AppWrapper>
+            <Component {...pageProps} />
+          </AppWrapper>
         </main>
       </div>
     </>

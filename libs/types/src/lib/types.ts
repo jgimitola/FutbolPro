@@ -4,3 +4,9 @@ export interface CardProps {
   imageUrl: string;
   href: string;
 }
+
+export interface Country {
+  name: string;
+  code: string;
+  flag: string;
+}
