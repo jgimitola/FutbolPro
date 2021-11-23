@@ -18,7 +18,7 @@ export function Index() {
       <Count current={0} />
       <List>
         <Card
-          href="/about"
+          href="/hola"
           text="Hola"
           imageUrl="https://static01.nyt.com/images/2021/09/22/opinion/sunday/22FlagsStills-02/22FlagsStills-02-videoSixteenByNineJumbo1600-v2.jpg"
         />

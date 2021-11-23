@@ -7,6 +7,7 @@ export const StyledP = styled.p`
   background-color: #7e7d7d;
   border-radius: 1rem;
   padding: 1rem;
+  color: white;
 `;
 
 export const Creditos = styled.p`
