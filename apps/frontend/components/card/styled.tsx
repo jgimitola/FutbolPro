@@ -13,8 +13,15 @@ export const StyledCard = styled.li`
   }
 `;
 
-export const CardImage = styled.img`
-  aspect-ratio: 1.33;
+interface ImageProps {
+  mode: string;
+}
+
+export const CardImage = styled.img<ImageProps>`
+  aspect-ratio: ${(props) => {
+    if (props.mode === 'flag') return 1.33;
+    return 1;
+  }};
   width: 120px;
 `;
 

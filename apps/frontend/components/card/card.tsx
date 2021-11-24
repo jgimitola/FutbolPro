@@ -6,7 +6,7 @@ import { StyledCard, CardImage, CardText } from './styled';
 export function Card(props: CardProps) {
   return (
     <StyledCard>
-      <CardImage src={props.imageUrl} alt="" />
+      <CardImage src={props.imageUrl} alt="" mode={props.mode}/>
       <Link href={props.href}>
         <CardText>{props.text}</CardText>
       </Link>

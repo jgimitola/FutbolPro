@@ -20,9 +20,11 @@ export function Index() {
         {countries.map((country) => {
           return (
             <Card
+              key={`${country.code}-${country.name}`}
               text={country.name}
               imageUrl={country.flag}
               href={`/${country.name}`}
+              mode="flag"
             />
           );
         })}

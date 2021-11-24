@@ -25,8 +25,14 @@ const getCountries = async () => {
   return json.data;
 };
 
-const getTeams = (country: string) => {};
+const getTeams = async (country: any) => {
+  const json: any = await get(`teams?country=${country}`);
+  return json.data;
+};
 
-const getPlayers = (teamId: number) => {};
+const getPlayers = async (teamId: number) => {
+  const json: any = await get(`players?season=2020&team=${teamId}`);
+  return json.data;
+};
 
 export { getCountries, getTeams, getPlayers };
