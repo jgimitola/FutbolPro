@@ -20,6 +20,7 @@ export function Team(props: TeamProps) {
   const [players, setPlayers] = useState([] as Array<Player>);
 
   useEffect(() => {
+    if (!team) return;
     getPlayers(Number(team)).then((data) => {
       const playersParsed = data.response.map((playerRaw) => {
         return {
@@ -30,7 +31,7 @@ export function Team(props: TeamProps) {
       });
       setPlayers(playersParsed);
     });
-  }, []);
+  }, [team]);
 
   return (
     <StyledTeam>

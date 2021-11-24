@@ -20,6 +20,7 @@ export function Country(props: CountryProps) {
   const [teams, setTeams] = useState([] as Array<Team>);
 
   useEffect(() => {
+    if (!country) return;
     getTeams(country).then((data) => {
       const teamsParsed: Array<Team> = data.response.map((teamRaw) => {
         return {
@@ -30,7 +31,7 @@ export function Country(props: CountryProps) {
       });
       setTeams(teamsParsed);
     });
-  }, []);
+  }, [country]);
 
   return (
     <StyledCountry>
