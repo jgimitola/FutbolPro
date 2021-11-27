@@ -5,11 +5,29 @@ import Card from '../components/card/card';
 import List from '../components/list/list';
 
 import { useAppContext } from '../components/country-context/country-context';
+import { Country } from '@futbol-pro/types';
+import { getCountries } from '@futbol-pro/services';
 
 const StyledPage = styled.div``;
 
-export function Index() {
-  const countries = useAppContext();
+export async function getStaticProps() {
+  const { response } = await getCountries();
+  const countries = response;
+
+  return {
+    props: {
+      countries,
+    },
+  };
+}
+
+interface IndexProps {
+  countries: [Country];
+}
+
+export function Index(props: IndexProps) {
+  const countriesArray = useAppContext();
+  const countries = props.countries ? props.countries : countriesArray;
   const countriesNumber = countries.length;
 
   return (
