@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-import { StyledP, Creditos } from './styled';
+import { StyledP, Creditos } from '../../components/styled/styled';
 
 const StyledAbout = styled.div`
   display: flex;
